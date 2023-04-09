@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    title Motion project
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", type="text/css" href="./css/style.css")
+    script(src="./js/main.js" defer)
+  body.app
+    //- include includes/header.pug
+    header.banner
+      h1 Motion
+      ul
+        li
+          button(class="video" id="new-video") Video
+        li
+          button(class="image" id="new-image") Image
+        li
+          button(class="note" id="new-note") Note
+        li
+          button(class="todo" id="new-todo") Todo
+    main.document
+      //- ul.page
+    //- html 이 아닌 전부 js 코드로 생성
+    footer
+      p Copyright © 2023

@@ -1,0 +1,38 @@
+{
+    "name": "dream-type-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "gulp dev",
+        "build": "gulp"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.21.4",
+        "@babel/preset-env": "^7.21.4",
+        "@babel/preset-typescript": "^7.21.4",
+        "@types/gulp-sass": "^5.0.0",
+        "gulp": "^4.0.2",
+        "install": "^0.13.0",
+        "ts-node": "^10.9.1",
+        "tsify": "^5.0.4"
+    },
+    "dependencies": {
+        "babelify": "^10.0.0",
+        "del": "^7.0.0",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-bro": "^2.0.0",
+        "gulp-csso": "^4.0.1",
+        "gulp-image": "^6.3.1",
+        "gulp-pug": "^5.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-webserver": "^0.9.1",
+        "sass": "^1.61.0",
+        "uglifyify": "^5.0.2"
+    },
+    "type": "module"
+}

@@ -1,24 +1,7 @@
-interface PageComponent {
-    attachTo(parent: HTMLElement, position: InsertPosition): void;
-}
+import { BaseComponent } from './base.ts';
 
-export default class PageComponentImple implements PageComponent {
-    private _element: HTMLUListElement;
-
+export default class PageComponentImple extends BaseComponent<HTMLUListElement> {
     constructor() {
-        this._element = document.createElement('ul');
-        this._element.setAttribute('class', 'page');
-        this._element.textContent = 'this is page componenet';
-    }
-
-    get element() {
-        return this._element;
-    }
-
-    attachTo(
-        parent: HTMLElement,
-        position: InsertPosition = 'afterbegin'
-    ): void {
-        parent.insertAdjacentElement(position, this._element);
+        super(`<ul class="page"></ul>`);
     }
 }

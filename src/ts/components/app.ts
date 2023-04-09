@@ -13,6 +13,6 @@ export default class AppImple {
             'newTItl',
             'https://picsum.photos/200/300'
         );
-        image.attachTo(this.page.element);
+        image.attachTo(this.appRoot);
     }
 }

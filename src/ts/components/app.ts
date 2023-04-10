@@ -1,18 +1,16 @@
-import { ImageComponent } from './contents.ts';
-import PageComponentImple from './page.ts';
+import { Component } from './base';
+import { NoteComponent } from './contents.ts';
+import { Composable, PageComponent } from './page.ts';
 
 export default class AppImple {
-    private page: PageComponentImple;
+    private page: Component & Composable;
     constructor(private appRoot: HTMLElement) {
-        this.page = new PageComponentImple();
+        this.page = new PageComponent();
         this.page.attachTo(appRoot, 'afterbegin');
     }
 
-    createImage(title: string, url: string) {
-        const image = new ImageComponent(
-            'newTItl',
-            'https://picsum.photos/200/300'
-        );
-        image.attachTo(this.appRoot);
+    createNote() {
+        const note = new NoteComponent('titl', 'detail');
+        this.page.addChild(note);
     }
 }

@@ -1,5 +1,6 @@
-interface Component {
+export interface Component {
     attachTo(parent: HTMLElement, position?: InsertPosition): void;
+    detachFrom(parent: HTMLElement): void;
 }
 
 export abstract class BaseComponent<T extends HTMLElement>
@@ -18,5 +19,12 @@ export abstract class BaseComponent<T extends HTMLElement>
         position: InsertPosition = 'afterbegin'
     ): void {
         parent.insertAdjacentElement(position, this.element);
+    }
+
+    detachFrom(parent: HTMLElement): void {
+        if (parent !== this.element.parentElement) {
+            throw new Error('Parent mismatch!!');
+        }
+        parent.removeChild(this.element);
     }
 }

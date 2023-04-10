@@ -1,5 +1,4 @@
 import { Component } from './base';
-import { NoteComponent } from './contents.ts';
 import { Composable, PageComponent } from './page.ts';
 
 export default class AppImple {
@@ -7,10 +6,5 @@ export default class AppImple {
     constructor(private appRoot: HTMLElement) {
         this.page = new PageComponent();
         this.page.attachTo(appRoot, 'afterbegin');
-    }
-
-    createNote() {
-        const note = new NoteComponent('titl', 'detail');
-        this.page.addChild(note);
     }
 }

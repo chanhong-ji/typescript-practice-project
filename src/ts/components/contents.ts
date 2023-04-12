@@ -1,5 +1,15 @@
 import { BaseComponent } from './base.ts';
 
+export interface MediaData {
+    title: string;
+    url: string;
+}
+
+export interface TextData {
+    title: string;
+    body: string;
+}
+
 export class ImageComponent extends BaseComponent<HTMLElement> {
     constructor(title: string, url: string) {
         super(`<section class="image">
@@ -42,7 +52,7 @@ export class NoteComponent extends BaseComponent<HTMLElement> {
 }
 
 export class TodoComponent extends BaseComponent<HTMLElement> {
-    constructor(title: string) {
+    constructor(title: string, body: string) {
         super(`<section class="todo">
                 <input class="todo__box" id="todo__box" type="checkbox" />
                 <label class="todo__title"></label>
